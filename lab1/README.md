@@ -1,3 +1,2 @@
-# Frontend-Development
-# Lab1
+# Lab1 Frontend-Development
 # Michał Kos 260783
