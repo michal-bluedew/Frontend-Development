@@ -83,7 +83,6 @@ addToDatabase(banana);
 //findByShopName('lidl')
 
 
-
 function prepareResponse(msg, data) {
     var response = {
         msg: msg,
