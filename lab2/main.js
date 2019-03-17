@@ -75,11 +75,9 @@ addToDatabase(orange);
 addToDatabase(apple);
 addToDatabase(banana);
 
-console.log(readAllDatabase());
-
-console.log(updateFruit(1, {id: '100'}));
-
-console.log(readAllDatabase());
+// console.log(readAllDatabase());
+// console.log(updateFruit(1, {name: 'test'}));
+// console.log(readAllDatabase());
 // readAllDatabase();
 // findByName('banana');
 //findByShopName('lidl')
@@ -105,7 +103,7 @@ function addNewFruit(newFruit) {
     if (!!alreadyFruit) {
         return response;
     }
-    newFruit.id = ++database.currentId;
+    newFruit.id = ++database.id;
     database.records.push(newFruit);
 
     var response = prepareResponse('OK', null);
