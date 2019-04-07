@@ -71,6 +71,7 @@ var aplication = (function() {
     };
 })();
 
+//update, delete
 // var fruit = new InstanceFruit('Banana', 'Sweet', 'Yellow');
 //
 // aplication.addNewFruit(fruit);
