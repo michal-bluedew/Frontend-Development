@@ -1,11 +1,11 @@
 var database = {
     records: [],
-    currentId: 0
+    id: 0
 };
 
 
 var orange = {
-    id: null,
+    id: 1,
     name: "orange",
     taste: "sweet",
     form: "round",
@@ -19,7 +19,7 @@ var orange = {
 };
 
 var apple = {
-    id: null,
+    id: 2,
     name: "apple",
     taste: "sour",
     form: "round",
@@ -33,7 +33,7 @@ var apple = {
 };
 
 var banana = {
-    id: null,
+    id: 3,
     name: "banana",
     taste: "sweet",
     form: "longitudinal",
@@ -48,11 +48,11 @@ var banana = {
 
 
 function addToDatabase(fruit){
-    database.push(fruit);
+    database.records.push(fruit);
 }
 
 function readAllDatabase(){
-    database.forEach(function(fruit){
+    database.records.forEach(function(fruit){
         console.log(fruit);
     })
 }
@@ -75,6 +75,9 @@ addToDatabase(orange);
 addToDatabase(apple);
 addToDatabase(banana);
 
+// console.log(readAllDatabase());
+// console.log(updateFruit(1, {name: 'test'}));
+// console.log(readAllDatabase());
 // readAllDatabase();
 // findByName('banana');
 //findByShopName('lidl')
@@ -99,7 +102,7 @@ function addNewFruit(newFruit) {
     if (!!alreadyFruit) {
         return response;
     }
-    newFruit.id = ++database.currentId;
+    newFruit.id = ++database.id;
     database.records.push(newFruit);
 
     var response = prepareResponse('OK', null);
